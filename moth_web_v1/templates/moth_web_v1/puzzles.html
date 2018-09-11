@@ -1,0 +1,18 @@
+{% extends 'moth_web_v1/base.html' %}
+{% load staticfiles %}
+
+{% block javascript_extra %}
+  <script src="{% static 'moth_web_v1/res/common.js' %}"></script>
+  <script src="{% static 'moth_web_v1/res/terminal.js' %}"></script>
+  <script src="{% static 'moth_web_v1/res/puzzles.js' %}"></script>
+{% endblock%}
+
+{% block content %}
+  <h1>Open Puzzles</h1>
+  <div class="readme">
+    <div id="puzzles"></div>
+  </div>
+{% endblock %}
+
+{% block pagetitle %}Open Puzzles{% endblock %}
+

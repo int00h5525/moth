@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{% static 'moth_web_v1/style.css' %}">
+    <link rel="stylesheet" href="{% static 'moth_web_v1/res/style.css' %}">
+    <link rel="icon" href="{% static 'moth_web_v1/res/luna-moth.svg' %}" type="image/svg+xml">
+    <link rel="icon" href="{% static 'moth_web_v1/res/luna-moth.png' %}" type="image/png">
+
+    {% block head_extra %}{% endblock %}
+    <title>{% block pagetitle %}Unknown{% endblock %}</title>
+  </head>
+  <body>
+    <h1>MOTH</h1>
+    {% block navbar %}
+      <nav>
+        <ul>
+          <li><a href="{% url 'index' %}">Welcome</a></li>
+          <li><a href="register">Register</a></li>
+          <li><a href="{% url 'puzzles' %}">Puzzles</a></li>
+          <li><a href="scoreboard">Scoreboard</a></li>
+        </ul>
+      </nav>
+    {% endblock %}
+    <div id="content">
+    {% block content %}{% endblock %}
+    </div>
+
+    {% block javascript_extra %}{% endblock %}
+
+  </body>
+
+</html>

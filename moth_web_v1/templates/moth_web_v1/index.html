@@ -1,0 +1,53 @@
+{% extends 'moth_web_v1/base.html' %}
+
+{% block content %}
+  <section>
+    <h2>Getting Started</h2>
+
+    <p>
+      Here is what you need to do:
+    </p>
+
+    <ol>
+      <li>
+        <a href="register.html">Register</a> your team.
+        This only needs to happen once per team,
+        so if somebody else on your team has already done it,
+        you don't need to.
+      </li>
+
+      <li>
+        Get an <a href="puzzles.html">overview of puzzles</a>,
+        and start working on something.
+        The list of open puzzles changes over time,
+        you need to reload the page to get the current version!
+      </li>
+
+      <li>
+        Check the <a href="scoreboard.html">scoreboard</a>
+        in another tab,
+        to see how your team is doing.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Reading Material</h2>
+
+    <p>
+      Stuck? Taking a break?
+      Here are some things to read.
+    </p>
+
+    <ul>
+      <li><a href="{% url 'credits' %}">Credits</a></li>
+      <li>
+        <a href="scoring.html">About Scoring</a>
+        explains how we calculate scores, and why.
+        Reading this will help you formulate a strategy to win.
+      </li>
+    </ul>
+  </section>
+{% endblock %}
+
+{% block pagetitle %}Welcome to MOTH{% endblock %}
