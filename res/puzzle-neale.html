@@ -43,15 +43,15 @@ function init() {
     for (let mutation of mutationsList) {
       if (mutation.type == 'childList') {
         for (let e of mutation.addedNodes) {
-          //console.log(e);
+          console.log(e);
           if (! e.querySelectorAll) { continue; }
           for (let se of e.querySelectorAll("[src],[href]")) {
             se.outerHTML = se.outerHTML.replace(/(src|href)="([^/]+)"/i, "$1=\"" + base + "$2\"")
-               //console.log(se.outerHTML);
+               console.log(se.outerHTML);
           }
-          //console.log(e.querySelectorAll("[src]"));
+          console.log(e.querySelectorAll("[src]"));
         }
-        //console.log(mutation.addedNodes);
+        console.log(mutation.addedNodes);
       } else {
         console.log(mutation);
       }
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", init);
 		  <input type="hidden" name="cat">
 		  <input type="hidden" name="points">
 		  Team ID: <input type="text" name="id"> <br>
-		  Answer: <input type="text" name="answer"> <br>
+		  Answer: <input type="text" id="answer" name="answer"> <br>
 		  <input type="submit" value="Submit">
 		</form>
     <nav>
