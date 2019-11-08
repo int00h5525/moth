@@ -3,11 +3,18 @@ on: [push]
 
 jobs:
   build:
-    name: Build mothd
-    runs-on: ubuntu-latest
-    steps:
-      - name: Retrieve code
-        uses: actions/checkout@v1
-      - name: Build mothd
-        run: docker build -f Dockerfile.moth .
+    - name: Build mothd
+      runs-on: ubuntu-latest
+      steps:
+        - name: Retrieve code
+          uses: actions/checkout@v1
+        - name: Build mothd
+          run: docker build -f Dockerfile.moth .
+    - name: Build moth-devel
+      runs-on: ubuntu-latest
+      steps:
+        - name: Retrieve code
+          uses: actions/checkout@v1
+        - name: Build mothd
+          run: docker build -f Dockerfile.moth-devel .
 
