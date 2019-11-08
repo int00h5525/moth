@@ -1,8 +1,6 @@
 Dirtbags Monarch Of The Hill Server
-
-![](https://github.com/int00h5525/moth/Docker%20images/badge.svg)
-
 =====================
+![](https://github.com/int00h5525/moth/workflows/Docker%20images/badge.svg)
 
 This is a set of thingies to run our Monarch-Of-The-Hill contest,
 which in the past has been called
